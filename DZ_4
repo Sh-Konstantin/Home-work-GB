@@ -1,0 +1,13 @@
+def thesaurus(*args):
+    d = dict()
+    for name in args:
+        first = name.split()[1][0]
+        second = name [0]
+        if first not in d:\
+            d[first]=dict()
+        if second not in d[first]:
+            d[first] [second] = []
+        d[first][second].append(name)
+    return d
+
+print(thesaurus('Иван Сергеевич', 'Константин Леонидович', 'Алексей Валерьевич', 'Александр Сагыджанович' ))

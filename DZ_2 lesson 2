@@ -1,0 +1,14 @@
+list_1 = ['в','5','часов','17','минут','температура','воздуха','была', '+5']
+list_2 = []
+for el in list_1:
+    if el.isdigit():
+        list_2.extend(['"', f'{int(el):02}','"'])
+    elif el.startswith('+') or el.startswith('-'):
+        if el[1:].isdigit():
+            list_2.extend(['"', f'{el[0]}{int(el[1]):02}', '"'])
+        else: list_2.append(el)
+    else:list_2.append(' ')
+print(list_2)
+list_2 = ' '.join (list_2).strip
+print (list_2)
+

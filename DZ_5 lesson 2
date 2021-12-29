@@ -1,0 +1,7 @@
+    prices = [25.2, 25, 44.3, 69, 3, 344.2, 569, 599, 0.2, 265, 445]
+    for price in prices:
+        price = int(round(price*100))
+        rub = price // 100
+        kop = price % 100
+        print(f'{rub:02d} руб {kop:02d} коп', end = ', ')
+    print ('*'* 25)

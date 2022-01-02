@@ -9,6 +9,6 @@ for duration in sec:
     elif duration < hour:
         print(duration // minutes, 'min', duration % minutes, 'sec')
     elif duration < day:
-        print(duration // hour, 'hour', duration // minutes, 'min', duration % minutes, 'sec')
+        print(duration // hour, 'hour', duration % hour  // minutes, 'min', duration % minutes, 'sec')
     else:
-        print(duration// day, 'day',duration // hour, 'hour', duration // minutes, 'min', duration % minutes, 'sec')
+        print(duration// day, 'day',duration % day // hour, 'hour', duration % hour  // minutes, 'min', duration % minutes, 'sec')
